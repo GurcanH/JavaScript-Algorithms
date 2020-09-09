@@ -20,9 +20,12 @@ function sumZeroRefactor(arr){
     let right = arr.length -1;
 
     while (left < right) {
-        let sum = arr[left] + arr[right];
+        var leftValue = arr[left];
+        var rightValue = arr[right];
+
+        let sum = leftValue + rightValue;
         if (sum === 0){
-            return [arr[left], arr[right]];
+            return [leftValue, rightValue];
         } else if (sum > 0){
             right--;
         } else {
